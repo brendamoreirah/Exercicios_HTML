@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Execicio 1</title>
+</head>
+<body>
+    <header>
+        <h1>Lista de tarefas</h1>
+    </header>
+    
+    <main>
+        <input type="text"  name= "" id="tarefa" placeholder="Digite uma tarefa">
+        <button onclick="adicionarTarefa()">Adicionar</button>
+        <p></p>
+
+        <ul id="lista_tarefas">
+        
+        </ul>
+    </main>
+
+    <footer>
+
+    </footer>
+
+</body>
+
+<script>
+    function adicionarTarefa (){
+        //cadastrar um item na lista
+            //1- preciso ter o valor escrito da tarefa pelo meu usuario
+        
+        let valorInput = document.getElementById("tarefa").value;
+        
+        // console.log(valorInput);
+            //2- Criar a tarefa na lista
+        
+        let itemLista = document.createElement ("li");
+        itemLista.innerText = valorInput;
+
+        //estarei cadastrando um novo item ABAIXO do anterior: 
+        document.getElementById("lista_tarefas").appendChild(itemLista);
+
+        //3-Crei  botao de excluir
+
+        let botaoExcluir = document.createElement("button");
+        botaoExcluir.innerText = "Remover item";
+
+        itemLista.appendChild(botaoExcluir);
+        // 4- Assim que eu clicar no botao excluir, ele irá sair junto com o item
+        botaoExcluir.onclick = function(){
+            itemLista.remove();
+        }
+
+        //botaoExcluir.onclick = () => {
+        // item.Lista.remove()             mesma coisa que eu escrevi encima
+        //}
+        //=>  esse simbolo aqui subistitui a function
+
+
+        //document.getElementById:
+        //.value = ""; -> ele retorna um valor vazio
+        document.getElementById("tarefa").value = "";
+
+
+    }
+
+    
+</script>
+
+</html>

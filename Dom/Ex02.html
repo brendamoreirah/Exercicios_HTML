@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="pt-BR">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 2</title>
+</head>
+
+<body>
+    <header>
+
+        <h1>Modo Claro/Escuro</h1>
+
+    </header>
+
+    <main>
+        <button onclick="alterarTema()">Trocar tema</button>
+    </main>
+
+    <footer>
+
+    </footer>
+</body>
+<script>
+    //backgroudcolor= cor de fundo
+
+    function alterarTema(){// altera o tema de fundo
+        if (document.body.style.backgroundColor === 'black') {//se a cor de fundo padrao for preta, acontecera
+        document.body.style.backgroundColor = 'white';// o fundo ficara branco
+        document.body.style.color = 'black';// a letra ficara preta
+    } else {
+        document.body.style.backgroundColor = 'black';// se a cor de fundo padrao for branca, ela ficara preta
+        document.body.style.color = 'white';// e a letra ficara branca
+    }
+}
+</script>
+
+</html>
